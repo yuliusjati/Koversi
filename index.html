@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Konvensi Suhu</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      kelvin = () =>{
+        let kelvin =document.getElementById('kelvin').value;
+        let hasilkel1 = kelvin - 273;
+        document.getElementById('hasilkel1').value=hasilkel1;
+        let hasilkel2 = 9/5 * (kelvin-273);
+        document.getElementById('hasilkel2').value=hasilkel2;
+        let hasilkel3 = 4/5 *(kelvin - 273) + 32;
+        document.getElementById('hasilkel3').value=hasilkel3;
+      }
+      celcius = () =>{
+        let celcius =document.getElementById('celcius').value;
+        let hasilc1 = 1 * celcius + 273;
+        document.getElementById('hasilc1').value=hasilc1;
+        let hasilc2 = (9/5) * celcius + 32;
+        document.getElementById('hasilc2').value=hasilc2;
+        let hasilc3 = (5/4) * celcius;
+        document.getElementById('hasilc3').value=hasilc3;
+      }
+      fahrenheit = () =>{
+        let fahrenheit =document.getElementById('fahrenheit').value;
+        let hasilf1 = 1.8 * (fahrenheit-32);
+        document.getElementById('hasilf1').value=hasilf1;
+        let hasilf2 = 0.8 * (fahrenheit-32);
+        document.getElementById('hasilf2').value=hasilf2;
+        let hasilf3 = 1.8 * (fahrenheit-32) + 273;
+        document.getElementById('hasilf3').value=hasilf3;
+      }
+      reamur = () =>{
+        let reamur =document.getElementById('reamur').value;
+        let hasilr1 = (5/4)*reamur;
+        document.getElementById('hasilr1').value=hasilr1;
+        let hasilr2 = (9/4)*reamur + 32;
+        document.getElementById('hasilr2').value=hasilr2;
+        let hasilr3 = (5/4)*reamur + 273;
+        document.getElementById('hasilr3').value=hasilr3;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card col-sm-4">
+        <div class="card-header">
+          <h4>Menghitung Suhu Kelvin</h4>
+        </div>
+        <div class="card-body">
+
+          <input type="number" id="kelvin" class="form-control">
+          <button type="button" class="btn btn-info btn-block"onclick="kelvin()">hitung</button>
+          Hasil celcius
+          <input type="text" id="hasilkel1" class="form-control" readonly>
+          Hasil fahrenheit
+          <input type="text" id="hasilkel2" class="form-control" readonly>
+          Hasil reamur
+          <input type="text" id="hasilkel3" class="form-control" readonly>
+        </div>
+        <div class="card-header">
+          <h4>Menghitung Suhu Celcius</h4>
+        </div>
+        <div class="card-body">
+          <input type="number" id="celcius" class="form-control">
+          <button type="button" class="btn btn-info btn-block"onclick="celcius()">hitung</button>
+          Hasil kelvin
+          <input type="text" id="hasilc1" class="form-control" readonly>
+          Hasil fahrenheit
+          <input type="text" id="hasilc2" class="form-control" readonly>
+          Hasil reamur
+          <input type="text" id="hasilc3" class="form-control" readonly>
+        </div>
+        <div class="card-header">
+          <h4>Menghitung Suhu Fahrenheit</h4>
+        </div>
+        <div class="card-body">
+          <input type="number" id="fahrenheit" class="form-control">
+          <button type="button" class="btn btn-info btn-block"onclick="fahrenheit()">hitung</button>
+          Hasil celcius
+          <input type="text" id="hasilf1" class="form-control" readonly>
+          Hasil reamur
+          <input type="text" id="hasilf2" class="form-control" readonly>
+          Hasil kelvin
+          <input type="text" id="hasilf3" class="form-control" readonly>
+        </div>
+        <div class="card-header">
+          <h4>Menghitung Suhu Reamur</h4>
+        </div>
+        <div class="card-body">
+          <input type="number" id="reamur" class="form-control">
+          <button type="button" class="btn btn-info btn-block"onclick="reamur()">hitung</button>
+          Hasil celcius
+          <input type="text" id="hasilr1" class="form-control" readonly>
+          Hasil fahrenheit
+          <input type="text" id="hasilr2" class="form-control" readonly>
+          Hasil kelvin
+          <input type="text" id="hasilr3" class="form-control" readonly>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
